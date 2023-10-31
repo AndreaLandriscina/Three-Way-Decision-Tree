@@ -309,23 +309,3 @@ class ThreeWayClassifier:
         print(count_abstention)
         score = (count_correct + weight*count_abstention)/len(ypred)
         return score
-
-from sklearn.datasets import load_iris as dataset
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import classification_report
-data = dataset()
-train_X, X_test, train_y, y_test = train_test_split(
-    data.data, data.target, random_state=1)
-
-clf = ThreeWayClassifier(feature_names=data.feature_names,
-                         target_names=data.target_names, max_depth=3, alpha=0.3)
-
-tree = clf.fit(X=train_X, y=train_y)
-
-#tree.to_graphviz("cancer.dot", shape='rectangle', sorting=False)
-ypred = clf.predict(X_test)
-# score = accuracy_score(ypred, y_test)
-# print("Accuracy score =", score)
-# print("Accuracy score with abstention =", clf.accuracy(ypred, y_test, weight=1))
-# print(classification_report(ypred, y_test))
