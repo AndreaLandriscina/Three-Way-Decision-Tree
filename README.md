@@ -1,5 +1,5 @@
 # Three-Way-Classifier
-A Python library to solve multi-class classification problems with continuous attributes on a dataset. The peculiarity of the project is that this kind of machine-learning model can abstein from making a decision.
+A Python library that allows decision tree to abstein from making a decsision. It can solve multi-class classification problems with continuous attributes on a dataset. 
 <br />
 More info: [Three-Way and Semi-supervised Decision Tree Learning Based on Orthopartitions](https://link.springer.com/chapter/10.1007/978-3-319-91476-3_61) <br>
 
