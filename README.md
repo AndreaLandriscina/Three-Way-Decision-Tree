@@ -11,7 +11,7 @@ from sklearn.datasets import load_breast_cancer as dataset
 from sklearn.model_selection import train_test_split
 data = dataset()
 train_X, X_test, train_y, y_test = train_test_split(data.data, data.target, random_state=1)
-clf = ThreeWayClassifier()
+clf = ThreeWayClassifier(feature_names=data.feature_names, target_names=data.target_names, max_depth=3, alpha=0.3)
 tree = clf.fit(X=train_X, y=train_y)
 tree.to_graphviz("cancer.dot", shape='rectangle', sorting=False)
 ```
