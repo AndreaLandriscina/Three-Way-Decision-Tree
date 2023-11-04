@@ -102,7 +102,7 @@ expected_error_cost(instances)
   -	y: list <br>
   &nbsp;The list of targets.
 - Return
-  - expected_error_cost: float
+  - expected_error_cost: float <br>
   &nbsp;The expected classification error cost.
   - majority_class: int <br>
   &nbsp;The majority class of the set of instances.
